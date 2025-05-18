@@ -1,0 +1,36 @@
+@mixin text($size, $colorText) {
+  color: $colorText;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  @if ($size == "large") {
+    font-size: clamp(1.4rem, $size-large, 1.8rem);
+  } @else if ($size == "medium") {
+    font-size: clamp(0.8rem, $size-medium, 1.4rem);
+  } @else {
+    font-size: clamp(0.5rem, $size-small, 1.2rem);
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 820px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 580px) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

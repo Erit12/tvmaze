@@ -1,0 +1,85 @@
+.main {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-auto-rows: minmax(350px, auto);
+
+  background: #363535;
+  background: linear-gradient(
+    180deg,
+    rgba(54, 53, 53, 1) 10%,
+    rgba(139, 43, 226, 1) 28%,
+    rgba(30, 144, 255, 1) 100%
+  );
+
+  @include laptop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    box-shadow: inset 0 0 9px 9px rgba(0, 0, 255, 0.2);
+
+    @include flex-center;
+
+    background-color: $default-color;
+    &__img {
+      padding-top: 15px;
+      width: 50%;
+      height: 60%;
+    }
+    &__a {
+      text-decoration: none;
+      @include text("large", $color-electric);
+      &:hover {
+        color: $purple-intens;
+        transform: scale(1.2);
+      }
+    }
+    &__h1 {
+      @include text("large", $color-electric);
+    }
+    &__h2 {
+      @include text("medium", $purple-intens);
+    }
+    &__p {
+      @include text("small", $pink-brilliant);
+    }
+  }
+}
+.error__class {
+  display: flex;
+  justify-content: center;
+
+  .title {
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    box-shadow: inset 0 0 9px 9px rgba(0, 0, 255, 0.2);
+
+    @include flex-center;
+
+    background-color: $default-color;
+    height: 100px;
+    justify-content: center;
+    h2 {
+      width: 80%;
+      @include text("medium", $purple-intens);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+    <title>SeriesIa</title>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__section">
+        <div class="header__section__container">
+          <label for="number_card">Cantidad a Mostrar</label>
+          <select name="numberCard" id="number_card">
+            <option value="10">10</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="240">240</option>
+          </select>
+        </div>
+        <div class="header__section__logo">
+          <img class="logo__img" src="img/logo.png" alt="logo_site" />
+        </div>
+
+        <div class="header__section__search">
+          <input
+            class="search__input"
+            type="search"
+            placeholder="Buscar..."
+            id="search_text"
+          />
+          <button class="search__button" id="search_button">
+            <img class="search__img" src="img/search.png" alt="busqueda" />
+          </button>
+        </div>
+      </section>
+    </header>
+    <main class="main" id="main"></main>
+  </body>
+</html>

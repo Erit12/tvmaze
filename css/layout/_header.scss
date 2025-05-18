@@ -1,0 +1,78 @@
+.header {
+  width: 100%;
+  background-color: $bg-color;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+
+  @include mobile {
+    @include flex-center;
+  }
+
+  &__section {
+    display: flex;
+    width: 95%;
+    align-items: flex-end;
+    &__container {
+      width: 20%;
+      label {
+        color: $color-electric;
+      }
+      @include mobile {
+        width: 100%;
+
+        @include flex-center;
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+
+      @include flex-center;
+    }
+
+    &__logo {
+      width: 60%;
+
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 70%;
+        height: 100%;
+      }
+    }
+    &__search {
+      width: 20%;
+      height: 20px;
+      box-sizing: border-box;
+      display: flex;
+      input {
+        height: 20px;
+
+        @include tablet {
+          width: 100%;
+        }
+      }
+      label {
+        color: $color-electric;
+      }
+      button {
+        margin-left: 5px;
+        background-color: $purple-intens;
+        height: 20px;
+        border-radius: 15px;
+        img {
+          width: 30px;
+          height: 100%;
+        }
+        &:hover {
+          background-color: $color-electric;
+        }
+      }
+      @include mobile {
+        justify-content: center;
+      }
+    }
+  }
+}
